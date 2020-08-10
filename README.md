@@ -29,4 +29,4 @@ The following features have been provided to help us predict whether a person is
 
 After training of our model, we have made a flask web based API for prediction of a diabetese patient. 
 
-After that we have deployed on "Heroku" cloud platform.
+After that we have deployed on "Heroku" cloud platform for which link has been mentioned above.
