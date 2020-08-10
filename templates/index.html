@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 
 {% block head %}
 <title>Data Collection Page</title>
@@ -6,15 +6,26 @@
 
 <body>
 {% block body %}
+
+<div class="topnav">
+  <!--<a class="active" href="http://127.0.0.1:5000/about">About</a>-->
+  <a href="https://github.com/srbkumar/ML_Predict-Diabetes_Logistic_Regression">Git Hub</a>
+<!--  <a href="about">About</a>
+  <div class="topnav-right">
+    <a href="#search">Search</a>
+    <a href="#about">About</a>
+  </div>-->
+</div>
+
+
 <div class="content">
+    <div class="image1">
+        <image src="{{ url_for('static', filename='images/Doctor.jpg')}}" width="100%" height="540">
+    </div>
 
-
-    <image src="{{ url_for('static', filename='images/DOCTOR.jpg')}}" class="image1">
-
-    <div>
     <div class="relative">
         <h2><u>Prediction For Diabetes</u></h2>
-    <form action="/predict" method="POST">
+            <form action="/predict" method="POST">
             <p><input type="number" name="Pregnancies" id="Pregnancies" placeholder="PREGNANCIES"></p>
             <p><input type="float" name="Glucose" id="Glucose" placeholder="GLUCOSE"></p>
             <p><input type="float" name="BloodPressure" id="BloodPressure" placeholder="BLOOD PRESSURE"></p>
@@ -24,9 +35,7 @@
             <p><input type="float" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction"placeholder="DIABETES PEDIGREE FUNCTION"></p>
             <p><input type="number" name="Age" id="Age"placeholder="AGE"></p>
             <p><input type="submit" value="Predict" id="button"></p>
-
-        </form>
-    </div>
+            </form>
     </div>
 </div>
 {% endblock %}

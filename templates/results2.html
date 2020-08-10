@@ -6,10 +6,14 @@
 
 <body>
 {% block body %}
-<img src="{{ url_for('static', filename='images/res1.jpg')}}" class="image2">
+<div class="cont">
+    <div class="image2">
+        <img src="{{ url_for('static', filename='images/NoDiabetes.jpg')}}" width="100%" height="360">
+    </div>
 
-<div class="res">
-    <p><h1>{{output}}</h1></p>
+    <div class="res">
+        <p><h1>{{output}}</h1></p>
+    </div>
 </div>
 {% endblock %}
 </body>
